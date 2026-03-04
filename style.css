@@ -1,0 +1,360 @@
+/* :root {
+--} */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Satisfy&display=swap");
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+svg {
+  overflow: visible;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffcad4;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  display: grid;
+  place-items: center;
+  transition: all 2s ease-in;
+  overflow: auto;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.no-txt-decor {
+  text-decoration: none !important;
+}
+.btn-wrapper {
+  display: grid;
+  place-items: center;
+  margin-top: 1rem;
+}
+.btn-material {
+  text-align: center;
+  height: 2.5rem;
+  width: auto;
+  fill: #8c2f39;
+  cursor: pointer;
+}
+
+.btn-material:focus,
+.btn-material:hover {
+  color: #8c2f39;
+  transform: scale(1.2);
+  transition: all 1s ease-in-out;
+}
+
+#gift-wrapper {
+  display: grid;
+  place-items: center;
+}
+#gift-box {
+  cursor: pointer;
+}
+
+.opened > #gift-box > #g-top {
+  animation: topOpened 3s forwards;
+}
+
+@keyframes topOpened {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center bottom; /* hinge point */
+  }
+  to {
+    transform: rotate(-45deg);
+    transform-origin: center bottom;
+    translate: 5px 250px;
+  }
+}
+.wish-text-wrapper {
+  padding: 2rem;
+}
+.wish-text {
+  text-decoration: underline;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: x-large;
+  color: #8c2f39;
+  font-weight: 700;
+}
+
+.out {
+  animation: outPg 5s forwards ease-out;
+}
+/* Pg-3 Styles */
+#pg-three {
+  display: none;
+  visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+#pg-three-wrapper-wt {
+  display: flex !important;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#video-container {
+  height: auto;
+  width: auto;
+  margin: 0.5rem;
+}
+#shorts-container {
+  display: flex !important;
+  height: auto;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 0.5rem;
+}
+.yt-short,
+.yt-video {
+  border-radius: 20px;
+  object-fit: cover;
+  padding: 0.5rem;
+}
+.yt-wrapper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.yt-video {
+  height: 13rem;
+  width: 20rem;
+}
+.yt-short {
+  height: 20rem;
+  width: 13rem;
+}
+.onscreen {
+  display: block !important;
+  visibility: visible !important;
+  display: flex !important;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
+}
+.onscreen,
+.onscreen * {
+  animation: inPg 5s forwards ease-in;
+}
+#pg-three > .wish-text {
+  padding: 1rem;
+}
+
+.remPg {
+  animation: outPgUp 2.5s forwards ease-in;
+}
+
+@keyframes inPg {
+  from {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-size: 10px;
+    transform: rotate(180deg);
+    transform-origin: center bottom;
+    transform-origin: center bottom;
+    translate: -1000px -1000px;
+    display: none;
+    visibility: hidden;
+  }
+  to {
+    font-family: "Pinyon Script", cursive;
+    font-weight: 900;
+    font-size: 28px;
+    transform: rotate(0deg);
+    transform-origin: center bottom;
+    translate: 0px 0px;
+    display: block;
+    visibility: visible;
+  }
+}
+
+@keyframes outPg {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center bottom;
+  }
+  to {
+    transform: rotate(-45deg);
+    transform-origin: center bottom;
+    translate: -1000px -1000px;
+    display: none;
+    visibility: hidden;
+  }
+}
+@keyframes outPgUp {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center bottom;
+  }
+  to {
+    transform: rotate(+45deg);
+    transform-origin: center bottom;
+    translate: 0px -1000px;
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Page-Two Styles */
+#pg-two {
+  display: none;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: auto;
+  height: auto;
+}
+
+#gf-img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: crimson 5px dashed;
+}
+#gf-text {
+  padding: 1rem;
+  width: 100vw;
+  text-align: center;
+  font-size: large;
+  color: #8c2f39;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.popIn {
+  animation: popIn 5s forwards ease-in;
+  display: flex !important;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  visibility: visible !important;
+}
+@keyframes popIn {
+  from {
+    transform: scale(0);
+    display: none;
+    visibility: hidden;
+  }
+  to {
+    transform: scale(1);
+    display: block;
+    visibility: visible;
+  }
+}
+.outPgRight {
+  animation: outPgRight 5s forwards ease-out;
+}
+
+@keyframes outPgRight {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center bottom;
+    display: block;
+    visibility: visible;
+  }
+  to {
+    transform: rotate(45deg);
+    transform-origin: center bottom;
+    translate: 1000px -1000px;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* Page-4 Animations */
+#pg-four {
+  display: none;
+  visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+  padding: 4rem;
+  border: #8c2f39 1rem dotted;
+}
+.slideInUp {
+  animation: slideInUp 5s forwards ease-in;
+  display: block !important;
+  visibility: visible !important;
+}
+#closing-text {
+  color: #b56576;
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.fadeOut {
+  animation: fadeOut 5s forwards ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(1000px);
+    display: none;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0px);
+    display: block;
+    visibility: visible;
+  }
+}
+@keyframes fadeOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    display: block;
+    visibility: visible;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1200px) {
+  .popIn {
+    flex-direction: row;
+    width: 50vw;
+  }
+  #closing-text {
+    font-size: xx-large;
+  }
+  .pg-two-divide {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  #gf-text {
+    width: 30vw;
+    font-size: x-large;
+  }
+}
